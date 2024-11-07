@@ -11,7 +11,7 @@ import java.awt.Color;
  * @author ESTUDIANTE
  */
 public class Main extends javax.swing.JFrame {
-
+    String guardar;
     /**
      * Creates new form Main
      */
@@ -40,6 +40,9 @@ public class Main extends javax.swing.JFrame {
         salida = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         guardarResultado = new javax.swing.JButton();
+        guardaM = new javax.swing.JButton();
+        ponerM = new javax.swing.JButton();
+        borrarM = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,6 +111,30 @@ public class Main extends javax.swing.JFrame {
             }
         });
         jPanel1.add(guardarResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 60, 30));
+
+        guardaM.setText("M+");
+        guardaM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardaMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(guardaM, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 60, -1));
+
+        ponerM.setText("MR");
+        ponerM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ponerMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ponerM, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 60, -1));
+
+        borrarM.setText("MC");
+        borrarM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                borrarMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(borrarM, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 50, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -183,6 +210,22 @@ public class Main extends javax.swing.JFrame {
         
     }//GEN-LAST:event_guardarResultadoActionPerformed
 
+    private void guardaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardaMActionPerformed
+        // TODO add your handling code here:
+        guardar = entrada1.getText();
+    }//GEN-LAST:event_guardaMActionPerformed
+    
+    private void ponerMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ponerMActionPerformed
+        // TODO add your handling code here:
+        entrada1.setText(guardar);
+    }//GEN-LAST:event_ponerMActionPerformed
+
+    private void borrarMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarMActionPerformed
+        // TODO add your handling code here:
+        guardar = "";
+        borrarM.setBackground(Color.black);
+    }//GEN-LAST:event_borrarMActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -219,15 +262,18 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton borrarM;
     private javax.swing.JButton cambiarColor;
     private javax.swing.JTextField entrada1;
     private javax.swing.JTextField entrada2;
+    private javax.swing.JButton guardaM;
     private javax.swing.JButton guardarResultado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton limpiar;
+    private javax.swing.JButton ponerM;
     private javax.swing.JButton restar;
     private javax.swing.JTextField salida;
     private javax.swing.JButton sumar;
